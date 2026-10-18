@@ -2,7 +2,7 @@
 
 [![Portable checks](https://github.com/viames/numbers-native/actions/workflows/ci.yml/badge.svg)](https://github.com/viames/numbers-native/actions/workflows/ci.yml) [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![Preview](https://img.shields.io/badge/preview-0.5.0-blue)](https://github.com/viames/numbers-native/releases/tag/v0.5.0)
 
-[Website](https://viames.github.io/numbers-native/) · [Download](https://github.com/viames/numbers-native/releases/tag/v0.5.0) · [Italiano](README.it.md) · [Support](https://github.com/viames/numbers-native/issues)
+[Website](https://viames.github.io/numbers-native/) · [Download](https://github.com/viames/numbers-native/releases/tag/v0.5.0) · [Italiano](README.it.md) · [MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.viames%2Fnumbers-native/versions/0.5.0) · [Support](https://github.com/viames/numbers-native/issues)
 
 Native Apple Numbers tools for Codex, by **Viames Marino**. Open source under the **MIT License**.
 
