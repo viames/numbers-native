@@ -1,0 +1,36 @@
+{
+  "name": "numbers-native",
+  "version": "0.5.0",
+  "private": true,
+  "description": "Native Apple Numbers tools for Codex",
+  "author": "Viames Marino",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:native": "node scripts/native-smoke.mjs",
+    "package": "node scripts/package.mjs",
+    "test:style": "node scripts/object-style-smoke.mjs",
+    "test:charts": "node scripts/chart-smoke.mjs",
+    "test:guided": "node scripts/native-030-smoke.mjs",
+    "test:files": "node scripts/native-040-smoke.mjs",
+    "test:workflows": "node scripts/native-050-smoke.mjs"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "esbuild": "0.28.2",
+    "zod": "4.6.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viames/numbers-native.git"
+  },
+  "homepage": "https://viames.github.io/numbers-native/",
+  "bugs": {
+    "url": "https://github.com/viames/numbers-native/issues"
+  }
+}

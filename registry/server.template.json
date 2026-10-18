@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.viames/numbers-native",
+  "title": "Numbers Native",
+  "description": "Native Apple Numbers on macOS: formulas, guided charts, guarded edits and CSV. No Excel conversion.",
+  "repository": {
+    "url": "https://github.com/viames/numbers-native",
+    "source": "github"
+  },
+  "websiteUrl": "https://viames.github.io/numbers-native/",
+  "version": "0.5.0",
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/viames/numbers-native/releases/download/v0.5.0/numbers-native-0.5.0.mcpb",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "manifest_version": "0.3",
+  "name": "numbers-native",
+  "display_name": "Numbers Native",
+  "version": "0.5.0",
+  "description": "Work directly with native Apple Numbers documents on macOS. No Excel conversion.",
+  "long_description": "38 tools for native Numbers documents, formulas, compatible formatting, 11 template-linked chart profiles, guided edits, typed CSV/TSV append/upsert, complete file-pair backup/restore/move and PDF/PNG previews. Requires Apple Numbers in a logged-in macOS session and Automation permission for the host. No Accessibility driver or extra API key. Verified on one Mac with Numbers 14.5; other versions are not certified. This MCP bundle provides tools; install the Codex plugin for the accompanying skills.",
+  "author": {"name": "Viames Marino", "url": "https://github.com/viames"},
+  "repository": {"type": "git", "url": "https://github.com/viames/numbers-native.git"},
+  "homepage": "https://viames.github.io/numbers-native/",
+  "documentation": "https://github.com/viames/numbers-native#readme",
+  "support": "https://github.com/viames/numbers-native/issues",
+  "screenshots": ["assets/demo.png"],
+  "server": {"type": "node", "entry_point": "dist/server.mjs", "mcp_config": {"command": "node", "args": ["${__dirname}/dist/server.mjs"]}},
+  "tools_generated": true,
+  "keywords": ["apple-numbers", "numbers", "macos", "codex", "spreadsheet", "charts", "native", "mcp"],
+  "license": "MIT",
+  "privacy_policies": ["https://viames.github.io/numbers-native/privacy.html"],
+  "compatibility": {"platforms": ["darwin"], "runtimes": {"node": ">=22"}}
+}

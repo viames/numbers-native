@@ -1,0 +1,10 @@
+{
+  "name": "viames-numbers",
+  "interface": { "displayName": "Viames Numbers" },
+  "plugins": [{
+    "name": "numbers-native",
+    "source": { "source": "local", "path": "./plugins/numbers-native" },
+    "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+    "category": "Productivity"
+  }]
+}

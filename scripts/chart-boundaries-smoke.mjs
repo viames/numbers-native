@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import { mkdtempSync, existsSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { NumbersBridge } from '../plugins/numbers-native/src/bridge.mjs';
+import { NumbersTools } from '../plugins/numbers-native/src/tools.mjs';
+import { chartProfiles } from '../plugins/numbers-native/src/chart-profiles.mjs';
+
+const directory = mkdtempSync(join(tmpdir(), 'numbers-native-chart-bounds-'));
+const bridge = new NumbersBridge();
+const service = new NumbersTools(bridge, { roots: [directory] });
+const call = (action, args = {}) => service.execute('numbers_' + action, args);
+let id;
+try {
+  const p = chartProfiles[0], path = join(directory, 'Rejected.numbers');
+  const base = { path, profile: p.id, headers: ['Category', 'Value'], data: [['One', 1]] };
+  const count = (await bridge.call('documents')).documents.length;
+  await assert.rejects(bridge.call('chart_create', { ...base, _chart_profile: { ...p, verified_numbers: '0.0' } }), e => e.code === 'CHART_PROFILE_UNVERIFIED');
+  await assert.rejects(bridge.call('chart_create', { ...base, _chart_profile: { ...p, rows: 999 } }), e => e.code === 'CHART_TEMPLATE_CHANGED');
+  assert.equal(existsSync(path), false);
+  assert.equal((await bridge.call('documents')).documents.length, count);
+  const headers = ['=2+2', ...Array.from({ length: 9 }, (_, i) => 'Series' + i)];
+  const data = Array.from({ length: 49 }, (_, i) => [i === 0 ? '=1+1' : 'Point' + i, ...Array.from({ length: 9 }, (_, j) => (i + 1) * (j + 1))]);
+  const start = Date.now();
+  const created = await call('chart_create', { path: join(directory, 'Five hundred cells.numbers'), profile: 'column', headers, data });
+  const creation_seconds = (Date.now() - start) / 1000;
+  id = created.document_id;
+  assert.equal(created.source_values.length, 500);
+  assert.deepEqual(created.source_values, [headers, ...data].flat());
+  const target = { document_id: id, sheet: 1, table: 1 };
+  const literal = await call('read', { ...target, range: 'A1:A2' });
+  assert.equal(literal.cells[0][0].value, '=2+2'); assert.equal(literal.cells[1][0].value, '=1+1');
+  assert.equal(literal.cells[0][0].formula, null); assert.equal(literal.cells[1][0].formula, null);
+  assert.equal((await call('write', { ...target, start: 'B2', values: [[{ formula: '=10*3' }]] })).cells[0][0].value, 30);
+  const changed = await call('object', { document_id: id, sheet: 1, action: 'update', kind: 'chart', object: 1, x: 80, width: 640 });
+  const chart = changed.objects.find(o => o.kind === 'chart'); assert.equal(chart.position.x, 80); assert.equal(chart.width, 640);
+  const evidence = { passed: true, directory, creation_seconds, checks: ['unverified release guard creates no file', 'changed template guard closes only its own unsaved fixture', '500-cell limit native readback', 'literal leading equals in headers/categories', 'explicit formula on a linked source cell', 'generated chart geometry editing'] };
+  writeFileSync(join(directory, 'verification.json'), JSON.stringify(evidence, null, 2));
+  console.log(JSON.stringify(evidence, null, 2));
+} finally { if (id) await call('close', { document_id: id }); }

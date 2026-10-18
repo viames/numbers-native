@@ -1,0 +1,7 @@
+node_modules/
+artifacts/
+*.numbers
+*.pdf
+.DS_Store
+*.numbers-native.json
+.mcpregistry_*

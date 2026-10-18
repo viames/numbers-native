@@ -1,0 +1,51 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "numbers-native",
+  "version": "0.5.0",
+  "description": "Create, read and edit native Apple Numbers documents through Numbers on macOS. No Excel conversion.",
+  "author": {
+    "name": "Viames Marino",
+    "url": "https://github.com/viames"
+  },
+  "license": "MIT",
+  "keywords": [
+    "apple-numbers",
+    "numbers",
+    "macos",
+    "codex",
+    "spreadsheet",
+    "native",
+    "charts",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "onboardingSkill": "./skills/setup/SKILL.md",
+      "interface": {
+        "displayName": "Numbers Native",
+        "shortDescription": "Work directly with Apple Numbers",
+        "longDescription": "Native Apple Numbers documents, formulas, compatible formats and guided charts. Guarded multi-table edits, native-result checks and typed CSV/TSV append/upsert. File-pair backup/restore/move, PDF/PNG previews and local diagnostics. Requires macOS, Numbers and Node.js 22+. No Accessibility or Excel conversion.",
+        "developerName": "Viames Marino",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "Create a native Numbers document with a budget and working formulas.",
+          "Read and update a Numbers table while preserving its native document."
+        ],
+        "websiteURL": "https://viames.github.io/numbers-native/",
+        "privacyPolicyURL": "https://viames.github.io/numbers-native/privacy.html",
+        "termsOfServiceURL": "https://viames.github.io/numbers-native/terms.html",
+        "brandColor": "#23734A",
+        "screenshots": [
+          "./assets/demo.png"
+        ]
+      }
+    }
+  },
+  "homepage": "https://viames.github.io/numbers-native/",
+  "repository": "https://github.com/viames/numbers-native"
+}
