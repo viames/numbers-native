@@ -28,8 +28,24 @@ No installation automatically changes macOS permissions or shell startup files.
 
 ## Official OpenAI directory
 
+This channel is not being pursued, at the author's request. No payment method has been added for submission.
+
 As verified in official documentation on **18 October 2026**, local MCP submissions are limited to approved partners and require the submitting organization to be allowlisted. The portal also requires a verified individual or business developer identity before upload. See https://developers.openai.com/plugins/deploy/desktop-only and https://developers.openai.com/plugins/deploy/submission.
 
 The submitting owner must complete identity verification directly in the OpenAI portal and obtain local-MCP eligibility from OpenAI. After those prerequisites, follow the documented local-plugin flow and upload the standalone plugin ZIP with its native MCP configuration. Resolve automated findings, provide reviewer test cases and walkthrough material, submit, and publish only after approval. Do not remove the local-execution requirement or disguise the package as a remote server to bypass eligibility.
 
 Portal access, review and approval are external state. A GitHub release, registry record or locally valid ZIP does not establish OpenAI-directory approval. No developer identity, private organization identifiers or reviewer credentials belong in the public repository.
+
+## Additional directory submissions — 18 October 2026
+
+Only free submission paths were used. No credit card, paid listing, subscription or hosted deployment was activated.
+
+| Directory | Verified outcome |
+| --- | --- |
+| [MCP Servers](https://mcpservers.org/submit) | Free submission accepted for Numbers Native and `io.github.viames/numbers-native`. The confirmation page states review within two weeks; this is not yet an approved listing. |
+| [MCP Market](https://mcpmarket.com/submit) | GitHub repository submitted to the **Free Queue ($0)**. The success message states an approximate four-to-six-week wait; this is not yet a live listing. |
+| [Glama](https://glama.ai/mcp/servers) | Submitted the public GitHub repository through **Runs from source**. The form closed, but no durable success receipt was shown and the public detail page was still absent. Treat as an unconfirmed submission, not an indexed listing. Glama describes a subsequent review and automated-check process. |
+| [Smithery](https://smithery.ai/docs/build/publish) | The official CLI 4.11.1 attempted to publish the existing macOS MCPB as `viames/numbers-native`. The service rejected it with HTTP 403: `Updating servers has been removed. Contact support@smithery.ai.` No successful release or listing was confirmed. |
+| [MCP.so](https://mcp.so/submit) | Excluded: the live submission form offered only a $39 paid submission. |
+
+These submissions do not change the native-only implementation or its macOS requirements. Do not present review queues, a created publisher account or an attempted upload as public availability. Further marketplace discovery and submissions are paused at the author's request.
