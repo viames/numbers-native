@@ -9,7 +9,7 @@ Author: **Viames Marino**. License: **MIT**. Product: **Numbers Native**, versio
 - Releases: https://github.com/viames/numbers-native/releases
 - Support: https://github.com/viames/numbers-native/issues
 - Privacy: https://viames.github.io/numbers-native/privacy.html
-- MCP Registry identity: `io.github.viames/numbers-native`
+- MCP Registry: [io.github.viames/numbers-native, version 0.5.0](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.viames%2Fnumbers-native/versions/0.5.0), active in the live registry as verified on 13 November 2026.
 
 Install in Codex with `codex plugin marketplace add viames/numbers-native`, then `codex plugin add numbers-native@viames-numbers`. Start a new local task. Repository discovery and installation are distinct from approval in the OpenAI directory. Native requirements and one-Mac verification limits remain explicit.
 
@@ -46,7 +46,7 @@ Only free submission paths were used. No credit card, paid listing, subscription
 
 | Directory | Verified outcome |
 | --- | --- |
-| [MCP Servers](https://mcpservers.org/submit) | Free submission accepted for Numbers Native and `io.github.viames/numbers-native`. The confirmation page states review within two weeks; this is not yet an approved listing. |
+| [MCP Servers](https://mcpservers.org/servers/viames/numbers-native) | Public Numbers Native listing verified on 13 November 2026; the earlier submission queue has resolved to a live project page. |
 | [MCP Market](https://mcpmarket.com/submit) | GitHub repository submitted to the **Free Queue ($0)**. The success message states an approximate four-to-six-week wait; this is not yet a live listing. |
 | [Glama](https://glama.ai/mcp/servers/viames/numbers-native) | Public listing verified on 13 November 2026. The local macOS server is indexed from source; this does not make it a cloud-hosted service. |
 | [Smithery](https://smithery.ai/docs/build/publish) | The official CLI 4.11.1 attempted to publish the existing macOS MCPB as `viames/numbers-native`. The service rejected it with HTTP 403: `Updating servers has been removed. Contact support@smithery.ai.` No successful release or listing was confirmed. |
