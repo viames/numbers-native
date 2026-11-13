@@ -1,3 +1,5 @@
+![Numbers Native — Native spreadsheets. Real calculations.](https://raw.githubusercontent.com/viames/numbers-native/main/.github/assets/cover.jpg)
+
 # Numbers Native
 
 Plugin Codex e server MCP per usare **Apple Numbers nel suo formato nativo**, di **Viames Marino**, con licenza **MIT**.
