@@ -9,7 +9,7 @@ Author: **Viames Marino**. License: **MIT**. Product: **Numbers Native**, versio
 - Releases: https://github.com/viames/numbers-native/releases
 - Support: https://github.com/viames/numbers-native/issues
 - Privacy: https://viames.github.io/numbers-native/privacy.html
-- MCP Registry: [io.github.viames/numbers-native, version 0.5.0](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.viames%2Fnumbers-native/versions/0.5.0), active in the live registry as verified on 13 November 2026.
+- MCP Registry: [io.github.viames/numbers-native, catalog revision 0.5.1-catalog.1](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.viames%2Fnumbers-native/versions/0.5.1-catalog.1), referencing the unchanged 0.5.0 native MCPB.
 
 Install in Codex with `codex plugin marketplace add viames/numbers-native`, then `codex plugin add numbers-native@viames-numbers`. Start a new local task. Repository discovery and installation are distinct from approval in the OpenAI directory. Native requirements and one-Mac verification limits remain explicit.
 
@@ -53,3 +53,9 @@ Only free submission paths were used. No credit card, paid listing, subscription
 | [MCP.so](https://mcp.so/submit) | Excluded: the live submission form offered only a $39 paid submission. |
 
 These submissions do not change the native-only implementation or its macOS requirements. Do not present review queues, a created publisher account or an attempted upload as public availability. Only suitable free distribution channels are pursued.
+
+## Catalog presentation revisions
+
+Registry revision `0.5.1-catalog.1` refreshes the description and adds the project icon. It references the unchanged, checksummed `0.5.0` macOS MCPB; it is not a new native runtime release or new compatibility evidence. The semantic prerelease suffix keeps the future regular `0.5.1` namespace available.
+
+Dispatch `registry.yml` with `tag=v0.5.0` and `catalog_revision=true`. The existing release verification runs first. The additional preparation step preserves server identity, website, repository and all package URLs/checksums, validates the owned public PNG against source, and changes only version, description and icon. Authentication still uses the existing short-lived GitHub identity. Other invocations retain the regular release publication path. Inspect the live record after publication.

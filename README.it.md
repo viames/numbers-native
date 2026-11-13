@@ -4,7 +4,7 @@
 
 Plugin Codex e server MCP per usare **Apple Numbers nel suo formato nativo**, di **Viames Marino**, con licenza **MIT**.
 
-[Sito](https://viames.github.io/numbers-native/) · [Download 0.5.0](https://github.com/viames/numbers-native/releases/tag/v0.5.0) · [Documentazione inglese](README.md) · [Registro MCP](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.viames%2Fnumbers-native/versions/0.5.0) · [Glama](https://glama.ai/mcp/servers/viames/numbers-native) · [MCP Servers](https://mcpservers.org/servers/viames/numbers-native) · [Supporto](https://github.com/viames/numbers-native/issues)
+[Sito](https://viames.github.io/numbers-native/) · [Download 0.5.0](https://github.com/viames/numbers-native/releases/tag/v0.5.0) · [Documentazione inglese](README.md) · [Registro MCP](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.viames%2Fnumbers-native/versions/0.5.1-catalog.1) · [Glama](https://glama.ai/mcp/servers/viames/numbers-native) · [MCP Servers](https://mcpservers.org/servers/viames/numbers-native) · [Supporto](https://github.com/viames/numbers-native/issues)
 
 ## Installazione in Codex
 
